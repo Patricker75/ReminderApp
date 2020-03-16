@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ReminderApp.Pages.AddPage"
+             Style="{StaticResource DarkMode}">
+    
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Task Name: "
+                       Grid.Column="0"
+                       Grid.Row="0"/>
+
+                <Label Text="Task End Date: "
+                       Grid.Column="0"
+                       Grid.Row="1"/>
+
+                <Label Text="Task Notes: "
+                       Grid.Column="0"
+                       Grid.Row="2"/>
+
+                <Entry x:Name="taskName"
+                       Grid.Row="0"
+                       Grid.Column="1"/>
+
+                <DatePicker x:Name="taskDate"
+                            Grid.Row="1"
+                            Grid.Column="1"/>
+
+                <Editor x:Name="taskNotes"
+                        Grid.Row="2"
+                        Grid.Column="1"/>
+
+                <Button Text="Create New Task"
+                        Grid.Row="3"
+                        Grid.ColumnSpan="2"
+                        Clicked="OnSubmit"/>
+
+                <Label x:Name="TEMPORARY"
+                       Grid.Row="4"
+                       Grid.ColumnSpan="2"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

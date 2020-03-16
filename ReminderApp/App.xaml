@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ReminderApp.App">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="DarkTextColor">#F3F3F3</Color>
+            <Color x:Key="DarkBackground">#1F1F1F</Color>
+
+            <Style x:Key="DarkMode"
+                   TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="#1F1F1F"/>
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource DarkTextColor}"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="{StaticResource DarkTextColor}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource DarkBackground}"/>
+            </Style>
+
+            <Style TargetType="Editor">
+                <Setter Property="TextColor" Value="{StaticResource DarkTextColor}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource DarkBackground}"/>
+            </Style>
+
+            <Style TargetType="DatePicker">
+                <Setter Property="TextColor" Value="{StaticResource DarkTextColor}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource DarkBackground}"/>
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="{StaticResource DarkTextColor}"/>
+                <Setter Property="BackgroundColor" Value="#010101"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

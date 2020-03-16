@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ReminderApp.MasterPage"
+             Title="Menu"
+             xmlns:local="clr-namespace:ReminderApp"
+             xmlns:pages="clr-namespace:ReminderApp.Pages"
+             BackgroundColor="#1F1F1F">
+
+    <ContentPage.Content>
+        <ListView x:Name="MasterList" x:FieldModifier="public">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="5, 10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="{Binding Title}"
+                                   Grid.Column="0"
+                                   HorizontalTextAlignment="Start"
+                                   Padding="5, 0"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type local:MasterPageItem}">
+                    <local:MasterPageItem Title="Task List" TargetType="{x:Type pages:TaskList}"/>
+                    <local:MasterPageItem Title="Add New Task" TargetType="{x:Type pages:AddPage}"/>
+                    <local:MasterPageItem Title="Test Page" TargetType="{x:Type pages:TestPage}"/>
+                </x:Array>
+            </ListView.ItemsSource>
+        </ListView>
+    </ContentPage.Content>
+
+</ContentPage>
